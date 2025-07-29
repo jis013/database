@@ -1,0 +1,58 @@
+[
+{
+"_id": "68886904f02ee8d1eece9947",
+"productId": 1,
+"name": "Speaker",
+"price": 499,
+"quantity": 1,
+"image": "speaker.jpg"
+},
+{
+"_id": "68886ce6f02ee8d1eece9949",
+"productId": 2,
+"name": "smart watch",
+"price": 490,
+"quantity": 1,
+"image": "smart.jpg"
+},
+{
+"_id": "68886fc8f02ee8d1eece994d",
+"productId": 3,
+"name": "speaker",
+"price": 1200,
+"quantity": 1,
+"image": "speaker.jpg"
+},
+{
+"_id": "68886fdef02ee8d1eece994e",
+"productId": 3,
+"name": "Headphone",
+"price": 200,
+"quantity": 1,
+"image": "headphone.jpg"
+},
+{
+"_id": "68886ffdf02ee8d1eece994f",
+"productId": 4,
+"name": "powerbank",
+"price": 2200,
+"quantity": 1,
+"image": "powerbank.jpg"
+},
+{
+"_id": "68887029f02ee8d1eece9950",
+"productId": 5,
+"name": "case",
+"price": 200,
+"quantity": 1,
+"image": "case.jpg"
+},
+{
+"_id": "6888704bf02ee8d1eece9951",
+"productId": 6,
+"name": "Hp Laptop",
+"price": 52200,
+"quantity": 1,
+"image": "hp.jpg"
+}
+]

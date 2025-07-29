@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Image Add to Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2px;
+      padding: 2px;
+    }
+    h1{
+      text-align: center;
+      background-color: black;
+      color: #ccc;
+      height: 100px;
+    }
+    .container {
+      border: 5px;
+      margin-left: 10px;
+      display:flex;
+      gap: 20px;
+      flex-wrap:wrap;
+    }
+    .product-card:hover{
+      transform: scale(1.18);
+    }
+    .product-card {
+      border: 1px solid #917e7e;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+      padding: 40px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .product-card button {
+      width: 200px;
+      height: 70px;
+      font-size: 50px;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #cart {
+      margin-top: 30px;
+      justify-self:center;
+    }
+    #cartItems {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    #cartItems li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 39px;
+    }
+    #cartItems img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+    
+  </style>
+</head>
+<body>
+<h1>Products AddToCart
+  <p style="font-size: 15px;">
+  Shopping, in its essence, is the activity of acquiring goods or services.
+  </p>
+</h1>
+<a href="viewmyorder.html"><img src="addtocard.gif" alt="" width="100px">
+    </a>
+  
+<br> <br><div class="container">
+  <div class="product-card">
+    <a href="smart.jpg">
+    <img src="smart.jpg" alt="Product 1" ></a>
+    <h4>Smart Watch</h4>
+    <p>Price: ₹490</p>
+    <button onclick="addToCart('smart', 490, 'smart.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="headphone.jpg">
+    <img src="headphone.jpg" alt="Product 2"></a>
+    <h4>Product 2</h4>
+    <p>Price: ₹200</p>
+    <button onclick="addToCart('headphone', 200, 'headphone.jpg')">Add to Cart</button>
+  </div>
+
+<div class="product-card">
+  <a href="speaker.jpg">
+    <img src="speaker.jpg" alt="Product 3"></a>
+    <h4>Speaker</h4>
+    <p>Price: ₹1,200</p>
+    <button onclick="addToCart('speaker', 200, 'speaker.jpg')">Add to Cart</button>
+  </div>
+
+<div class="product-card">
+  <a href="powerbank.jpg">
+    <img src="powerbank.jpg" alt="Product 4"></a>
+    <h4> PowerBank</h4>
+    <p>Price: ₹2,200</p>
+    <button onclick="addToCart('PowerBank', 200, 'powerbank.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="case.jpg">
+    <img src="case.jpg" alt="Product 4"></a>
+    <h4> Case</h4>
+    <p>Price: ₹200</p>
+    <button onclick="addToCart('Case', 200, 'case.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <a href="hp.jpg">
+    <img src="hp.jpg" alt="Product 4"></a>
+    <h4> HP Laptop</h4>
+    <p>Price: ₹52,200</p>
+    <button onclick="addToCart('HP Laptop', 200, 'hp.jpg')">Add to Cart</button>
+  </div>
+</div>
+ <div id="cart">
+  <h1>🛒 Cart ......!</h1>
+  <ul id="cartItems"></ul>
+  <p><strong>Total: ₹<span id="cartTotal">0</span></strong></p>
+</div>
+
+<script>
+  let total = 0;
+
+  function addToCart(productName, price, imageUrl)
+   {
+    const cartItems = document.getElementById("cartItems");
+
+    const listItem = document.createElement("li");
+
+    const img = document.createElement("img");
+    img.src = imageUrl;
+    img.alt = productName;
+
+    const text = document.createElement("span");
+    text.textContent = `${productName} - ₹${price}`;
+
+    listItem.appendChild(img);
+    listItem.appendChild(text);
+    cartItems.appendChild(listItem);
+
+    total += price;
+    document.getElementById("cartTotal").textContent = total;
+  }
+  
+
+</script>
+</body>
+</html>
